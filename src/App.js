@@ -5,6 +5,7 @@ import Popup from './components/Popup';
 import { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { createContext } from 'react';
+import { Helmet } from 'react-helmet';
 
 import Services from './pages/Services';
 import Logos from './pages/Logos';
@@ -58,6 +59,11 @@ function App() {
 
   return (
     <div className={styles.main_wrapper}>
+      <Helmet>
+        <meta name="description" content="Websites and visual content" />
+        <title>Design Israel</title>
+      </Helmet>
+
       <ThemeContext.Provider value={{ change, theme }}>
         {/* {opened && <Popup setOpened={setOpened} opened={opened} />} */}
         <Popup setOpened={setOpened} opened={opened} />

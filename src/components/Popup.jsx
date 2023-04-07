@@ -65,13 +65,13 @@ const Popup = ({ setOpened, opened }) => {
             </div> */}
             <div className={styles.middle_right}>
               <div className={styles.middle_project}>{t('popup_discuss')}</div>
-              <div className={styles.middle_mail}>Jerusalem@mail.ru</div>
-              <div className={styles.middle_phone}>+7 (932) 213-45-63</div>
+              <div className={styles.middle_mail}>{t('form_email_work')}</div>
+              <div className={styles.middle_phone}>{t('form_phone')}</div>
               <a href="#" className={styles.button}>
                 {t('header_client')}
               </a>
               <div className={styles.middle_cooperation}>{t('popup_coop')}</div>
-              <div className={styles.middle_lastmail}>Jerusalem@mail.ru</div>
+              <div className={styles.middle_lastmail}>{t('form_email_work')}</div>
             </div>
           </div>
         </div>

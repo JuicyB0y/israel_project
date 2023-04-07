@@ -50,6 +50,7 @@
   margin-top: 30px;
   display: flex;
   gap: 25px;
+  max-width: 2320px;
   img {
     width: 17%;
     height: 80%;
@@ -60,6 +61,7 @@
 }
 
 .imageText {
+  max-width: 2300px;
   p {
     font-size: 22px;
     font-weight: 400;
@@ -78,6 +80,7 @@
 
   img {
     width: 40%;
+    max-width: 827px;
   }
 
   p {

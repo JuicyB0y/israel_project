@@ -286,6 +286,7 @@
 
   a {
     position: relative;
+    // max-width: 630px;
     // width: 430px;
     // height: 292px;
   }
@@ -315,6 +316,30 @@
 .form {
   display: flex;
   margin-top: 50px;
+}
+
+@media screen and (min-width: 2100px) {
+  .cardContainer {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 2400px) {
+  .cardContainer {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media screen and (min-width: 2700px) {
+  .cardContainer {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media screen and (min-width: 3000px) {
+  .cardContainer {
+    grid-template-columns: repeat(7, 1fr);
+  }
 }
 
 @media screen and (max-width: 1300px) {

@@ -16,20 +16,20 @@ const Contacts = () => {
       <div className={styles.form__element}>
         <h4 className={styles.form__contact}>{t('form_contact')}</h4>
         <div className={styles.form__discuss}>{t('form_discuss')}</div>
-        <div className={styles.form__email}>Jerusalem@mail.ru</div>
-        <div className={styles.form__phone}>+7 (932) 213-45-63</div>
+        <div className={styles.form__email}>{t('form_email_work')}</div>
+        <div className={styles.form__phone}>{t('form_phone')}</div>
 
-        <Link className={styles.contactImg} to="#">
+        <a className={styles.contactImg} href="https://instagram.com/designisraell?igshid=YmMyMTA2M2Y=" target="_blank">
           <img src={insta} alt="image" />
           <p>design_israel</p>
-        </Link>
+        </a>
         <Link className={styles.contactImg} to="#">
           <img src={telegram} alt="image" />
           <p>design_israel</p>
         </Link>
 
         <div className={styles.form__coop}>{t('form_cooperation')}</div>
-        <div className={styles.form__email}>Jerusalem@mail.ru</div>
+        <div className={styles.form__email}>{t('form_email_work')}</div>
       </div>
       <div className={styles.form__bottom}>
         <div>

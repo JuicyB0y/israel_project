@@ -97,7 +97,7 @@
   &_right {
     //  flex: 0.5;
     display: flex;
-
+    max-width: 1880px;
     justify-content: space-between;
 
     img {
@@ -109,11 +109,25 @@
 .bottomImage {
   margin-top: 30px;
   width: 70%;
+  max-width: 1110px;
 }
 
 .form {
   display: flex;
   margin-top: 50px;
+}
+
+@media screen and (min-width: 2200px) {
+  .images_left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .leftTop,
+    .leftBottom {
+      width: 47%;
+      align-items: center;
+    }
+  }
 }
 
 @media screen and (max-width: 1300px) {

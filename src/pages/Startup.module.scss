@@ -83,6 +83,17 @@
   }
 }
 
+@media screen and (max-width: 1500px) {
+  .description {
+    .wrapper3d {
+      img {
+        width: 30%;
+        height: auto;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 1300px) {
   .form {
     display: block;
@@ -109,6 +120,12 @@
       height: 400px;
       video {
         width: 80%;
+      }
+    }
+
+    .wrapper3d {
+      img {
+        width: 45%;
       }
     }
   }
@@ -145,6 +162,14 @@
 
     article {
       font-size: 22px;
+    }
+
+    .wrapper3d {
+      img {
+        width: 418px;
+        height: 233px;
+        margin-bottom: 25px;
+      }
     }
   }
 }

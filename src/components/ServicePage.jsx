@@ -149,7 +149,7 @@ const ServicePage = ({
         </article>
         <aside className={`${styles.info_right} ${stylesFor3d === true ? styles.info_right3d : ''}`}>
           <div>
-            <a href="#">{t('servPage_arrow')}</a>
+            <a href="#form">{t('servPage_arrow')}</a>
             <img src={arrow} alt="arrow" />
           </div>
           <p>{t('servPage_arrText')}</p>

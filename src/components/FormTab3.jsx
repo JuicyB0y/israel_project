@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import emailjs from '@emailjs/browser';
+import axios from 'axios';
 
 import styles from './FormTab3.module.scss';
 
@@ -35,7 +36,16 @@ const FormTab3 = () => {
 
     onSubmit: (values, actions) => {
       try {
-        emailjs.send('service_lrjl91k', 'template_2td209s', values, 'ZQ1RHMPm_vSnxaIJP').then(() => {
+        // emailjs.send('service_lrjl91k', 'template_2td209s', values, 'ZQ1RHMPm_vSnxaIJP')
+        let fData = new FormData();
+
+        fData.append('name', values.name);
+        fData.append('company', values.company);
+        fData.append('email', values.email);
+        fData.append('number', values.number);
+        fData.append('text', values.text);
+
+        axios.post('http://localhost/israel_project/src/php/form3-db.php', fData).then(() => {
           console.log('email sent', values);
           actions.setSubmitting(false);
           setFormStatus('success');

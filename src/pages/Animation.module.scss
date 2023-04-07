@@ -487,6 +487,65 @@
   animation-play-state: paused;
 }
 
+@media screen and (min-width: 2600px) {
+  .works {
+    &_smallWrapper {
+      // position: relative;
+      width: 100%;
+      height: auto;
+      margin-bottom: 5px;
+    }
+
+    &_carousel {
+      display: block;
+      margin-bottom: 50px;
+      position: static;
+      width: 100%;
+      margin-bottom: 0;
+    }
+
+    &_topCarousel,
+    &_bottomCarousel {
+      display: flex;
+      align-items: center;
+      width: 69%;
+      margin-top: 0;
+      gap: 30px;
+
+      // margin: 10px auto;
+    }
+
+    &_card {
+      width: 92%;
+      margin-top: 30px;
+
+      &_img {
+        width: 100%;
+      }
+
+      &_card_case {
+        top: 15px;
+        right: 42px;
+      }
+    }
+
+    .works_topCarousel:nth-child(2),
+    .works_bottomCarousel:nth-child(2) {
+      display: none;
+    }
+
+    .animate,
+    .animateRight {
+      top: 50%;
+      transform: translate(0, 0); /* тут поменял для анимации в другую сторону */
+    }
+    .article {
+      max-width: 90%;
+      margin-top: 20px;
+    }
+  }
+}
+
 @media screen and (max-width: 1550px) {
   .works_smallWrapper {
     height: 211px;

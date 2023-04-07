@@ -49,17 +49,22 @@
   display: flex;
   gap: 50px;
   margin: 40px 0;
+  max-width: 1904px;
 }
 
 .bigImage {
   width: 90%;
   margin: 25px auto;
   display: block;
+  max-width: 1674px;
 }
 
 .botWrapper {
   display: flex;
   gap: 30px;
+  max-width: 1674px;
+  margin-left: auto;
+  margin-right: auto;
   img {
     width: 40%;
   }
@@ -86,6 +91,8 @@
 .botImage {
   position: relative;
   height: 700px;
+  max-width: 1388px;
+  margin: 0 auto;
   img {
     //  display: block;
     margin: 0 auto;
@@ -104,6 +111,16 @@
   margin-top: 50px;
   position: relative;
   //   z-index: 2;
+}
+
+@media screen and (min-width: 1700px) {
+  .botImage {
+    img {
+      display: block;
+      position: relative;
+      margin: 0 auto;
+    }
+  }
 }
 
 @media screen and (max-width: 1300px) {

@@ -15,7 +15,7 @@ i18n
   .use(initReactI18next) // passes i18n down to react-i18next
   .use(LanguageDetector)
   .init({
-    supportedLngs: ['en', 'ru', 'he'],
+    supportedLngs: ['en', 'ru', 'ces'],
     // whiteList: ['en', 'ru', 'he'],
     fallbackLng: 'en',
     detection: {

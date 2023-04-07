@@ -66,7 +66,7 @@ const Startup = () => {
             // controls
             config={{
               vimeo: {
-                playerOptions: { byline: true, controls: true },
+                playerOptions: { byline: true, controls: true, playsinline: false, iframeParams: { fullscreen: 0 } },
               },
             }}
             className={styles.video}

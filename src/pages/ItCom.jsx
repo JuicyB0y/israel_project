@@ -65,7 +65,6 @@ const ItCom = () => {
         <div className={styles.subheader}>{t('intis_style')}</div>
         <p>{t('intis_style1')}</p>
 
-        <div className={styles.subheader}>{t('korona_3d')}</div>
         <div className={styles.wrapper3d}>
           <img src={itCom_1} alt="itCom_1" />
           <img src={itCom_2} alt="itCom_2" />
@@ -83,7 +82,7 @@ const ItCom = () => {
             // controls
             config={{
               vimeo: {
-                playerOptions: { byline: true, controls: true },
+                playerOptions: { byline: true, controls: true, playsinline: false, iframeParams: { fullscreen: 0 } },
               },
             }}
             className={styles.video}

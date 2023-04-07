@@ -144,7 +144,7 @@ const Retouching = () => {
         </article>
         <aside className={styles.info_right}>
           <div>
-            <a href="#">{t('servPage_arrow')}</a>
+            <a href="#form">{t('servPage_arrow')}</a>
             <img src={arrow} alt="arrow" />
           </div>
           <p>{t('servPage_arrText')}</p>
@@ -190,25 +190,39 @@ const Retouching = () => {
         <div className={styles.works_miniWrapper}>
           <h3 className={styles.works_subtitleStatic}>{t('servPage_examples')}</h3>
         </div>
-        <div className={styles.works_onlyCarousel}>
+
+        <div className={styles.topWrapper}>
+          <div className={styles.works_onlyCarousel}>
+            <img src={woman1} alt="image" />
+            <img src={woman2} alt="image" />
+          </div>
+          <div className={styles.works_onlyCarousel}>
+            <img src={ring1} alt="image" />
+            <img src={ring2} alt="image" />
+          </div>
+          <div className={styles.works_onlyCarousel}>
+            <img className={styles.onlyImage} src={house} alt="image" />
+          </div>
+          <div className={styles.works_onlyCarouselParfume}>
+            <img src={parf1} alt="image" />
+            <img src={parf2} alt="image" />
+          </div>
+          <div className={styles.works_onlyCarousel} style={{ marginBottom: '0' }}>
+            <img src={pen1} alt="image" />
+            <img src={pen2} alt="image" />
+          </div>
+        </div>
+
+        {/* <div className={styles.bigWrapper}>
           <img src={woman1} alt="image" />
           <img src={woman2} alt="image" />
-        </div>
-        <div className={styles.works_onlyCarousel}>
           <img src={ring1} alt="image" />
           <img src={ring2} alt="image" />
-        </div>
-        <div className={styles.works_onlyCarousel}>
-          <img className={styles.onlyImage} src={house} alt="image" />
-        </div>
-        <div className={styles.works_onlyCarouselParfume}>
           <img src={parf1} alt="image" />
           <img src={parf2} alt="image" />
-        </div>
-        <div className={styles.works_onlyCarousel} style={{ marginBottom: '0' }}>
           <img src={pen1} alt="image" />
           <img src={pen2} alt="image" />
-        </div>
+        </div> */}
 
         {/* {stagesList.length > 0 && (
           <>

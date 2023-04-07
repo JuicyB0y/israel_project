@@ -10,9 +10,9 @@ import telegram from '../assets/telegram-plane-svgrepo-com.svg';
 const Icons = () => {
   return (
     <div className={styles.iconsWrapper}>
-      <Link className={styles.icon} to="#">
+      <a className={styles.icon} href="https://instagram.com/designisraell?igshid=YmMyMTA2M2Y=" target="_blank">
         <img src={insta} alt="icon" />
-      </Link>
+      </a>
       <Link className={styles.icon} to="#">
         <img src={whatsapp} alt="icon" />
       </Link>

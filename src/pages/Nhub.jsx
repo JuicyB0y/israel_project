@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Contacts from '../components/Contacts';
 import Form from '../components/Form';
+import ReactPlayer from 'react-player';
 
 import styles from './Nhub.module.scss';
 
@@ -21,13 +22,28 @@ const Nhub = () => {
       </section>
       <section className={styles.description}>
         <div className={styles.videoWrapper}>
-          <iframe
+          <ReactPlayer
+            url="https://player.vimeo.com/video/709527824?h=c067bdd056"
+            width="100%"
+            height="100%"
+            // controls
+            // config={{ vimeo: { playerOptions: { background: true } } }}
+            config={{
+              vimeo: {
+                playerOptions: { byline: true, controls: true },
+              },
+            }}
+            className={styles.video}
+          />
+
+          {/* <iframe
             title="vimeo-player"
             src="https://player.vimeo.com/video/709527824?h=c067bdd056"
             width="100%"
             height="100%"
             frameborder="0"
-            allowfullscreen></iframe>
+            allowfullscreen></iframe> */}
+
           {/* <video width="320" height="240" controls>
             <source src={Nhub_video} type="video/mp4" />
             <source src={Nhub_video} type="video/ogg" />

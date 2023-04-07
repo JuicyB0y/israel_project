@@ -303,7 +303,7 @@
     }
 
     img:nth-child(2) {
-      width: 52%;
+      width: 55%;
       object-fit: cover;
       border-radius: 32px;
     }
@@ -513,6 +513,36 @@
 .animate:hover,
 .animateRight:hover {
   animation-play-state: paused;
+}
+
+// .bigWrapper {
+//   display: none;
+// }
+
+@media screen and (min-width: 1600px) {
+  // .bigWrapper {
+  //   display: flex;
+  //   flex-wrap: wrap;
+  // }
+
+  // .works_onlyCarousel {
+  //   display: flex;
+  //   margin-right: 20px;
+  // }
+
+  .works_onlyCarouselParfume {
+    img:nth-child(1) {
+      width: 519px;
+      object-fit: cover;
+      border-radius: 32px;
+    }
+
+    img:nth-child(2) {
+      width: 698px;
+      object-fit: cover;
+      border-radius: 32px;
+    }
+  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -784,6 +814,20 @@
 
     p {
       font-size: 15px;
+    }
+  }
+
+  .works_onlyCarouselParfume {
+    img:nth-child(1) {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 32px;
+    }
+
+    img:nth-child(2) {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 32px;
     }
   }
 

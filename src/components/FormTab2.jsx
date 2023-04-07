@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import emailjs from '@emailjs/browser';
+import axios from 'axios';
 
 import styles from './FormTab2.module.scss';
 
@@ -33,16 +34,30 @@ const FormTab2 = () => {
 
     onSubmit: (values, actions) => {
       try {
-        emailjs.send('service_lrjl91k', 'template_2td209s', values, 'ZQ1RHMPm_vSnxaIJP').then(() => {
-          console.log('email sent', values);
-          actions.setSubmitting(false);
-          setFormStatus('success');
+        // emailjs.send('service_lrjl91k', 'template_2td209s', values, 'ZQ1RHMPm_vSnxaIJP')
+        let fData = new FormData();
 
-          setTimeout(() => {
-            actions.resetForm();
-            setFormStatus('');
-          }, 4000);
-        });
+        fData.append('name', values.name);
+        fData.append('email', values.email);
+        fData.append('number', values.number);
+        fData.append('text', values.text);
+        fData.append('upload', values.upload);
+
+        axios
+          .post(
+            'ftp.designisraell.com/home/u217800908/domains/designisraell.com/public_html/israel_project/src/php/form2-db.php',
+            fData,
+          )
+          .then(() => {
+            console.log('email sent', values);
+            actions.setSubmitting(false);
+            setFormStatus('success');
+
+            setTimeout(() => {
+              actions.resetForm();
+              setFormStatus('');
+            }, 4000);
+          });
       } catch (error) {
         console.log(error);
         setFormStatus('failure');

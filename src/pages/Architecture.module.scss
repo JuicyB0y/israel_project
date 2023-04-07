@@ -47,6 +47,9 @@
   margin-top: 70px;
   display: flex;
   justify-content: space-between;
+  max-width: 2025px;
+  margin-left: auto;
+  margin-right: auto;
 
   img {
     width: 47%;
@@ -54,8 +57,12 @@
 }
 
 .bigImgConcept {
+  display: flex;
   margin-top: 50px;
   width: 100%;
+  max-width: 2025px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 // .bigImgWrapper {
@@ -68,6 +75,9 @@
   display: flex;
   justify-content: flex-start;
   width: 100%;
+  max-width: 2325px;
+  margin-left: auto;
+  margin-right: auto;
   //   height: 850px;
 
   .black {
@@ -81,7 +91,6 @@
     height: 100%;
     width: 32%;
     margin-right: 100px;
-    //  align-items: space-between;
     justify-content: space-between;
   }
 
@@ -100,6 +109,12 @@
   display: flex;
   margin-top: 50px;
 }
+
+// @media screen and (min-width: 2300px) {
+//   .imgWrapper {
+
+//   }
+// }
 
 @media screen and (max-width: 1300px) {
   .image {

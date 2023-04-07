@@ -55,8 +55,8 @@
   }
 
   .wrapper3d {
+    margin-top: 70px;
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
     gap: 30px;
     justify-content: center;
@@ -100,6 +100,16 @@
   .contacts {
     margin-bottom: 30px;
   }
+
+  .description {
+    .wrapper3d {
+      img {
+        width: 40%;
+        height: auto;
+        // object-fit: cover;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -117,6 +127,12 @@
       height: 400px;
       .video {
         // width: 80%;
+      }
+    }
+
+    .wrapper3d {
+      img {
+        width: 45%;
       }
     }
   }
@@ -154,6 +170,14 @@
 
     article {
       font-size: 22px;
+    }
+
+    .wrapper3d {
+      img {
+        width: 418px;
+        height: 233px;
+        margin-bottom: 25px;
+      }
     }
   }
 }

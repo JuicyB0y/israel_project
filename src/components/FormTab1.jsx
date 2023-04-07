@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useFormik } from 'formik';
+
 import emailjs from '@emailjs/browser';
 import * as Yup from 'yup';
+import axios from 'axios';
 
 import styles from './Form.module.scss';
 
@@ -31,16 +33,30 @@ const FormTab1 = () => {
 
     onSubmit: (values, actions) => {
       try {
-        emailjs.send('service_lrjl91k', 'template_2td209s', values, 'ZQ1RHMPm_vSnxaIJP').then(() => {
-          console.log('email sent', values);
-          actions.setSubmitting(false);
-          setFormStatus('success');
+        // emailjs.send('service_lrjl91k', 'template_2td209s', values, 'ZQ1RHMPm_vSnxaIJP')
+        let fData = new FormData();
 
-          setTimeout(() => {
-            actions.resetForm();
-            setFormStatus('');
-          }, 4000);
-        });
+        fData.append('name', values.name);
+        fData.append('email', values.email);
+        fData.append('number', values.number);
+        fData.append('budget', values.budget);
+        fData.append('terms', values.terms);
+        fData.append('text', values.text);
+
+        //axios.post('../php/form-db.php', fData).then(() => {
+
+        axios
+          .post('https://designisraell.com/israel_project/src/php/designisraell.com//php/form-db.php', fData)
+          .then(() => {
+            console.log('email sent', values);
+            actions.setSubmitting(false);
+            setFormStatus('success');
+
+            setTimeout(() => {
+              actions.resetForm();
+              setFormStatus('');
+            }, 4000);
+          });
       } catch (error) {
         console.log(error);
         setFormStatus('failure');
@@ -149,9 +165,6 @@ const FormTab1 = () => {
             value={formik.values.terms}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}>
-            <option value="" disabled="disabled">
-              {t('form_terms_select')}
-            </option>
             <option value={t('popup_2dan')}>{t('popup_2dan')}</option>
             <option value={t('popup_3dan')}>{t('popup_3dan')}</option>
             <option value={t('popup_3d')}>{t('popup_3d')}</option>

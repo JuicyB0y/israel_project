@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import ReactPlayer from 'react-player';
 
 import Form from '../components/Form';
 import Contacts from '../components/Contacts';
@@ -69,7 +70,7 @@ const KoronaPay = () => {
           <img src={korona3d_3} alt="korona3d_3" />
         </div>
 
-        <div className={styles.subheader}></div>
+        <div className={styles.subheader}>{t('korona_stil')}</div>
         <p>{t('korona_stil_text')}</p>
         <div className={styles.wrapperStill}>
           <div className={styles.imgWrapper}>
@@ -108,7 +109,20 @@ const KoronaPay = () => {
         <div className={styles.videoWrapper}>
           <p>{t('korona_anim_text')}</p>
           <div>
-            <iframe
+            <ReactPlayer
+              url="https://player.vimeo.com/video/493357085?h=d3dc645eac&byline=0&portrait=0"
+              width="640"
+              height="300"
+              // controls
+              // config={{ vimeo: { playerOptions: { background: true } } }}
+              config={{
+                vimeo: {
+                  playerOptions: { byline: true, controls: true },
+                },
+              }}
+              className={styles.video}
+            />
+            {/* <iframe
               className={styles.video}
               src="https://player.vimeo.com/video/493357085?h=d3dc645eac&byline=0&portrait=0"
               // width="640"
@@ -118,7 +132,7 @@ const KoronaPay = () => {
               allowfullscreen
               frameborder="0"
               allow="autoplay fullscreen picture-in-picture"
-              allowfullscreen></iframe>
+              allowfullscreen></iframe> */}
           </div>
           {/* <script src="https://player.vimeo.com/api/player.js"></script> */}
 

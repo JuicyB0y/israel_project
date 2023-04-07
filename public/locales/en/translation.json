@@ -13,8 +13,7 @@
   "form_budget_big3": "from $30,000 to $100,000",
 
   "form_budget_small": "less than 400000?",
-  "form_terms": "Terms",
-  "form_terms_select": "Select terms",
+  "form_terms": "Section",
   "form_terms_big": "Up to 14 days",
   "form_terms_small": "Up to 7 days",
   "forms_comment": "Comment",
@@ -31,6 +30,8 @@
   "services_logos": "Logos and corporate identity",
   "services_photo": "Photo retouching",
   "services_webDev": "Web development",
+  "form_phone": "+420 777 473 909",
+  "form_email_work": "artem@designisraell.com",
 
   "logos_header": "Logos and corporate identity",
   "logos_subheader": "The agency includes a team specializing in branding: the development of logos, identities and corporate identity media.",

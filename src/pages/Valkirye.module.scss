@@ -55,6 +55,7 @@
 .images {
   margin-top: 60px;
   display: flex;
+  max-width: 2300px;
 
   &_left {
     flex: 1.5;
@@ -110,8 +111,12 @@
 }
 
 .bottomImage {
+  display: block;
   margin-top: 30px;
   width: 100%;
+  max-width: 2300px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .form {

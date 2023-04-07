@@ -13,8 +13,7 @@
   "form_budget_big3": "от $30,000 до $100,000",
 
   "form_budget_small": "Меньше 400000?",
-  "form_terms": "Сроки",
-  "form_terms_select": "Выбрать сроки",
+  "form_terms": "Раздел",
   "form_terms_big": "До 14 дней",
   "form_terms_small": "До 7 дней",
   "forms_comment": "Комментарий",
@@ -31,6 +30,8 @@
   "services_logos": "Логотипы и фирменный стиль",
   "services_photo": "Фото ретуширование",
   "services_webDev": "Веб-разработка",
+  "form_phone": "+7 (977)-963-92-03",
+  "form_email_work": "anastasia@designisraell.com",
 
   "logos_header": "Логотипы и фирменный стиль",
   "logos_subheader": "В состав агентства входит команда, специализирующаяся на брендинге: разработка логотипов, фирменных стилей и носителей фирменного стиля.",

@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import russia from '../assets/russia.png';
 import uk from '../assets/uk.png';
 import israel from '../assets/israel.png';
+import czech from '../assets/czech-republic.png';
 import { THEME_STANDART, THEME_REVERSED, ThemeContext } from '../App';
 
 import styles from './LanguageFlags.module.scss';
@@ -22,10 +23,10 @@ const LanguageFlags = () => {
       flag: uk,
     },
     {
-      code: 'he',
-      country_code: 'he',
-      name: 'עברית',
-      flag: israel,
+      code: 'ces',
+      country_code: 'ces',
+      name: 'čeština',
+      flag: czech,
     },
     {
       code: 'ru',
@@ -40,13 +41,13 @@ const LanguageFlags = () => {
   const changeLanguage = (language) => {
     i18n.changeLanguage(language);
     setVisibleFlags(false);
-    if (language === 'en' || language === 'ru') {
+    if (language === 'en' || language === 'ru' || language === 'ces') {
       change(THEME_STANDART);
       console.log(THEME_STANDART);
-    } else {
+    } /* else {
       change(THEME_REVERSED);
       console.log(THEME_REVERSED);
-    }
+    } */
   };
 
   useEffect(() => {

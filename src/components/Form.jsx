@@ -71,7 +71,7 @@ const Form = () => {
   // },
 
   return (
-    <div className={styles.form}>
+    <div id="form" className={styles.form}>
       <h3 className={styles.title}>{t('form_name')}</h3>
 
       <div className={styles.formHeader}>

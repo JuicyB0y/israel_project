@@ -90,7 +90,7 @@ const Header = ({ setOpened, opened }) => {
         </div>
       </div>
       <div className={`${styles.second__section} ${theme === 'reversed' ? styles.second__section_reversed : ''}`}>
-        <a href="#" className={`${styles.button} ${theme === 'reversed' ? styles.button_reversed : ''}`}>
+        <a href="#form" className={`${styles.button} ${theme === 'reversed' ? styles.button_reversed : ''}`}>
           {t('header_client')}
         </a>
         <LanguageFlags />
