@@ -7,11 +7,11 @@ if (mysqli_connect_error()) {
     echo mysqli_connect_error();
     exit();
 } else {
-    $name = $_POST['name'];
-    $company = $_POST['company'];
-    $email = $_POST['email'];
-    $number = $_POST['number'];
-    $text = $_POST['text'];
+    $name = mysqli_real_escape_string($conn,$_POST['name']);
+    $company = mysqli_real_escape_string($conn,$_POST['company']);
+    $email = mysqli_real_escape_string($conn,$_POST['email']);
+    $number = mysqli_real_escape_string($conn,$_POST['number']);
+    $text = mysqli_real_escape_string($conn,$_POST['text']);
 
 
     $sql = "INSERT INTO form3 (name, company, email, number, text) VALUES ('$name', '$company', '$email', '$number', '$text')";

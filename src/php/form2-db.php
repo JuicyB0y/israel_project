@@ -8,10 +8,10 @@ if (mysqli_connect_error()) {
     exit();
 } else {
 
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $number = $_POST['number'];
-    $text = $_POST['text'];
+    $name = mysqli_real_escape_string($conn,$_POST['name']);
+    $email = mysqli_real_escape_string($conn,$_POST['email']);
+    $number = mysqli_real_escape_string($conn,$_POST['number']);
+    $text = mysqli_real_escape_string($conn,$_POST['text']);
 
 
     $targetDir = "../uploads/";
