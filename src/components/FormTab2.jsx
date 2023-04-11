@@ -45,7 +45,7 @@ const FormTab2 = () => {
 
         axios
           .post(
-            'ftp.designisraell.com/home/u217800908/domains/designisraell.com/public_html/israel_project/src/php/form2-db.php',
+            'https://localhost/israel_project/src/php/form2-db.php',
             fData,
           )
           .then(() => {

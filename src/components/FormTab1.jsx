@@ -46,7 +46,7 @@ const FormTab1 = () => {
         //axios.post('../php/form-db.php', fData).then(() => {
 
         axios
-          .post('https://designisraell.com/israel_project/src/php/designisraell.com//php/form-db.php', fData)
+          .post('https://localhost/israel_project/src/php/form3-db.php', fData)
           .then(() => {
             console.log('email sent', values);
             actions.setSubmitting(false);

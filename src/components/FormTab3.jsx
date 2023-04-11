@@ -45,7 +45,7 @@ const FormTab3 = () => {
         fData.append('number', values.number);
         fData.append('text', values.text);
 
-        axios.post('http://localhost/israel_project/src/php/form3-db.php', fData).then(() => {
+        axios.post('https://localhost/israel_project/src/php/form3-db.php', fData).then(() => {
           console.log('email sent', values);
           actions.setSubmitting(false);
           setFormStatus('success');
